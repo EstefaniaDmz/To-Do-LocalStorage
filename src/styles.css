@@ -2,3 +2,189 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    @apply text-dark dark:text-light;
+}
+
+h1, h2, th {
+    @apply  font-[Lumanosimo] font-normal;
+}
+
+h3, h4, h5, p, span, button {
+    @apply font-[Inter];
+}
+
+button {
+    @apply flex items-center gap-x-1.5 justify-center transition-all;
+}
+
+.filter-btn {
+    @apply rounded-full px-4 py-2.5 border border-info dark:border-info-disabled;
+    
+    p, i {
+        @apply text-info dark:text-info-disabled;
+    }
+
+    &:hover, &.active {
+        @apply bg-info dark:bg-info-disabled;
+
+        p, i {
+            @apply text-light dark:text-dark-bg;
+        }
+    }
+}
+
+.add-btn {
+    @apply rounded-md px-4 py-3 bg-success dark:bg-success-disabled;
+
+    p, i {
+        @apply text-light dark:text-dark-bg;
+    }
+
+    &:hover, &.active {
+        @apply bg-opacity-60;
+    }
+}
+
+table {
+    @apply w-full table-auto border-collapse items-center border-spacing-x-2 border-spacing-y-2.5;
+
+    th, td {
+        @apply py-2.5;
+    }
+
+    th {
+        @apply text-xl text-left;
+    }
+
+    td {
+        @apply border-b border-secondary;
+    }
+
+    tbody {
+        @apply border-t border-secondary;
+    }
+
+    .options-group {
+        @apply flex items-center gap-x-2.5;
+
+        button {
+            @apply p-2 border rounded-xl text-sm;
+        }
+
+        .del-btn {
+            @apply border-danger dark:border-danger-disabled;
+
+            i, p {
+                @apply text-danger dark:text-danger-disabled;
+            }
+
+            &:hover {
+                @apply bg-danger dark:bg-danger-disabled;
+
+                i, p {
+                    @apply text-light dark:text-dark-bg;
+                }
+            }
+        }
+
+        .upd-btn {
+            @apply border-warning dark:border-warning-disabled;
+
+            i, p {
+                @apply text-warning dark:text-warning-disabled;
+            }
+
+            &:hover {
+                @apply bg-warning dark:bg-warning-disabled;
+
+                i, p {
+                    @apply text-light dark:text-dark-bg;
+                }
+            }
+        }
+    }
+
+    .disabled {
+        .todo-text {
+            @apply text-gray-400 dark:text-gray-700 line-through;
+        }
+
+        .del-btn {
+            @apply border-none cursor-default bg-danger-disabled dark:bg-danger-disabled-dark hover:bg-danger-disabled hover:dark:bg-danger-disabled-dark;
+
+            i, p {
+                @apply text-light dark:text-dark-bg;
+            }
+        }
+
+        .upd-btn {
+            @apply border-none cursor-default bg-warning-disabled dark:bg-warning-disabled-dark hover:bg-warning-disabled hover:dark:bg-warning-disabled-dark;
+
+            i, p {
+                @apply text-light dark:text-dark-bg;
+            }
+        }
+    }
+}
+
+/* .todo-row {
+    @apply flex items-center col-span-3 gap-x-1;
+}
+
+.todo-options {
+    @apply flex justify-between items-center col-span-1;
+
+    .row-btn {
+        @apply p-2 border rounded-xl text-sm;
+
+        &.del-btn {
+            @apply border-danger dark:border-danger-disabled;
+
+            i, p {
+                @apply text-danger dark:text-danger-disabled;
+            }
+
+            &:hover {
+                @apply bg-danger dark:bg-danger-disabled;
+
+                i, p {
+                    @apply text-light dark:text-dark-bg;
+                }
+            }
+
+            &.disabled {
+                @apply border-none bg-danger-disabled dark:bg-danger-disabled-dark;
+
+                i, p {
+                    @apply text-light dark:text-dark-bg;
+                }
+            }
+        }
+
+        &.upd-btn {
+            @apply border-warning dark:border-warning-disabled;
+
+            i, p {
+                @apply text-warning dark:text-warning-disabled;
+            }
+
+            &:hover {
+                @apply bg-warning dark:bg-warning-disabled;
+
+                i, p {
+                    @apply text-light dark:text-dark-bg;
+                }
+            }
+
+            &.disabled {
+                @apply border-none bg-warning-disabled dark:bg-warning-disabled-dark;
+
+                i, p {
+                    @apply text-light dark:text-dark-bg;
+                }
+            }
+        }
+    }
+} */
